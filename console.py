@@ -10,4 +10,6 @@ new_staff_member1 = Staff("Catriona loves penguinas", "23/07/2021", "Tigers", 4)
 staff_repository.add_staff_member(new_staff_member)
 staff_repository.add_staff_member(new_staff_member1)
 
+staff_repository.remove_staff_member("Zookeepy McGhee")
+
 pdb.set_trace()

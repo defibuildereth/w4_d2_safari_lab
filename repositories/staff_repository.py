@@ -35,4 +35,7 @@ def find_staff_member_name(name):
     return staff_member
 
 
-    return staff_member
+def remove_staff_member(name):
+    sql = "DELETE FROM staff WHERE name = %s"
+    values = [name]
+    run_sql(sql, values)
