@@ -22,3 +22,17 @@ def select_all_staff():
         staff_members.append(staff)
 
     return staff_members
+
+def find_staff_member_name(name):
+    staff_member = None
+
+    sql = "SELECT * FROM staff WHERE name = %s"
+    values = [name]
+    result = run_sql(sql, values)[0]
+    if result is not None:
+        staff_member = Staff(result['name'], result['start_date'], result['department'], result['performance_rating'], result['id'])
+
+    return staff_member
+
+
+    return staff_member
