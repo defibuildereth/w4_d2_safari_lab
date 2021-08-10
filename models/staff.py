@@ -5,3 +5,6 @@ class Staff:
         self.department = department
         self.performance_rating = performance_rating
         self.id = id
+
+    def update_rating(self, new_rating):
+        self.performance_rating = int(new_rating)

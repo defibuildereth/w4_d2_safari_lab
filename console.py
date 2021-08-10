@@ -12,4 +12,7 @@ staff_repository.add_staff_member(new_staff_member1)
 
 staff_repository.remove_staff_member("Zookeepy McGhee")
 
+new_staff_member1.update_rating(2)
+staff_repository.update_staff_member(new_staff_member1)
+
 pdb.set_trace()
