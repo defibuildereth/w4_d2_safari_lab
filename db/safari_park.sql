@@ -1,5 +1,6 @@
+DROP TABLE IF EXISTS animals;
 DROP TABLE IF EXISTS staff;
-DROP TABLE IF EXISTS animal;
+
 
 CREATE TABLE staff(
     id SERIAL PRIMARY KEY,
@@ -13,5 +14,6 @@ CREATE TABLE animals(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     species VARCHAR(255),
-    age INT
+    age INT,
+    staff_id INT REFERENCES staff(id)
 );
