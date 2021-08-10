@@ -12,3 +12,13 @@ def add_staff_member(staff):
     id = results[0]['id']
     staff.id = id
     return staff
+
+def select_all_staff():
+    staff_members = []
+    sql = "SELECT * FROM staff"
+    results = run_sql(sql)
+    for row in results:
+        staff = Staff(row['name'], row['start_date'], row['department'], row['performance_rating'], row['id'])
+        staff_members.append(staff)
+
+    return staff_members
